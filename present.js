@@ -24,7 +24,8 @@ window.onload = function() {
 
 
 var addButtonsToBirthdayPopup = function() {
-  //console.log('hello');
+  console.log('hello');
+ // setTimeout(function(){
   var myId = 'id';
   var myIdText = document.getElementsByClassName('_1ayn')[0].href;
   if(myIdText.indexOf('id=')>0) {
@@ -50,20 +51,19 @@ var addButtonsToBirthdayPopup = function() {
       id = idText.substring(idText.indexOf('com/')+4);
     }
 
-    //console.log(id);
-
-    //var myId = 'asdf';
-
     var birthdayDiv = document.createElement('DIV');
-    birthdayDiv.class = 'birthdayDiv';
+    birthdayDiv.className = 'birthdayDiv';
     var link = document.createElement('A');
     link.href = 'https://www.facebook.com/profile.php?id='+myId+'&and='+id+'&sk=photos';
     link.target = "_blank";
+    link.innerHTML = "View mutual pictures";
 
     birthdayDiv.appendChild(link);
 
     birthdays[i].appendChild(birthdayDiv);
 
   }
+
+  
 };
 

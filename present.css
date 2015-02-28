@@ -1,9 +1,13 @@
 
 
 .birthdayDiv {
-	width: 100px !important;
-	height: 20px !important;
-	background-color: #000 !important;
+	min-width: 100px !important;
+	padding: 10px;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 5px 0;
+	background-color: #3f5b9a !important;
 	color: #fff;
 }
 
