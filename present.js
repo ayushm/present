@@ -4,6 +4,19 @@
 window.onload = function() {
   //var button = document.getElementsByClassName('fbRemindersStory')[1];
 
+  addBirthdayButtonListener();
+
+  setInterval(function(){
+    if(document.getElementsByClassName('birthdayButtonModified').length<1) {
+      addBirthdayButtonListener();
+    }
+  }, 5000);
+
+
+}
+
+
+function addBirthdayButtonListener() {
   var fbReminders = document.getElementsByClassName('fbRemindersStory');
 
   var button;
@@ -17,16 +30,16 @@ window.onload = function() {
 
   console.log(button);
 
+  button.className = button.className+" birthdayButtonModified"
+
   button.onclick = addButtonsToBirthdayPopup;
-
-
 }
 
 
 var addButtonsToBirthdayPopup = function() {
   console.log('hello');
- // setTimeout(function(){
-  var myId = 'id';
+  //setTimeout(function(){
+    var myId = 'id';
   var myIdText = document.getElementsByClassName('_1ayn')[0].href;
   if(myIdText.indexOf('id=')>0) {
     myId = myIdText.substring(myIdText.indexOf('id=1')+3);
@@ -63,6 +76,8 @@ var addButtonsToBirthdayPopup = function() {
     birthdays[i].appendChild(birthdayDiv);
 
   }
+
+//},1500);
 
   
 };
